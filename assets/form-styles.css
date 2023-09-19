@@ -1,0 +1,32 @@
+.form-container {
+    margin: 20px auto;
+  }
+  
+  .input-feild {
+    font-size: 1.5rem;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    text-transform: capitalize;
+  }
+  
+  .input {
+    font-size: 1.5rem;
+    width: 250px;
+    height: 40px;
+    color: #002233;
+  }
+  
+  .input::placeholder {
+    color: #d99a3a;
+    text-transform: capitalize;
+  }
+  
+  .input-sumbit{
+      background-color: #d99a3a;
+      color: #1f3c0b;
+      border-radius: 12px;
+      border: none;
+  }
+  

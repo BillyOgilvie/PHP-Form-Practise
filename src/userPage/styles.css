@@ -1,0 +1,25 @@
+.user-page-container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.pet-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.pet-image {
+    width: 100px;
+    height: 100 px;
+    object-fit: cover;
+    border: 4px #d99a3a solid;
+    border-radius: 12px;
+}
+
+.pet-name{
+    text-transform: capitalize;
+}

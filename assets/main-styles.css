@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+/* 
+--text: #d4e2f7;
+--background: #002233;
+--primary: #0066FF;
+--secondary: #1f3c0b;
+--accent: #d99a3a;
+*/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Lato", sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  background-image: url("/assets/wave-haikei.svg");
+  background-position: center bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #002233;
+  color: #d4e2f7;
+}
+
+.heading {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
+  background-color: #0066ff;
+  border-bottom: solid 8px #d99a3a;
+}
+
+/* NAV BAR */
+.nav-bar-list {
+  display: flex;
+  gap: 5px;
+  list-style-type: none;
+}
+
+.nav-bar-list a, .nav-bar-list a:visited{
+  color: #d4e2f7;
+}
+
+.nav-bar-list a:hover {
+  color: #d99a3a;
+}
