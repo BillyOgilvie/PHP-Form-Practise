@@ -30,3 +30,17 @@
       border: none;
   }
   
+  .file-label {
+    display: inline-block;
+    background-color: #d99a3a;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-size: 16px;
+    text-align: center;
+  }
+
+.file-label:hover {
+    background-color: #1f3c0b;
+}

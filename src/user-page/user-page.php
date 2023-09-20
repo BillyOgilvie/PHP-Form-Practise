@@ -1,15 +1,12 @@
 <?php
 require '../../config/db-connection.php';
+require '../../actions/security.php';
+
+$user_id = requireLogin();
 
 $pets = [];
 
-session_start();
 
-if (!isset($_SESSION['user_id'])) {
-    header('Location: /src/home/home.php');
-    exit();
-} else {
-    $user_id = $_SESSION['user_id'];
 
     $db = connectToDB();
 
@@ -24,7 +21,7 @@ if (!isset($_SESSION['user_id'])) {
 
     $stmt->close();
     $db->close();
-}
+
 
 
 
@@ -38,7 +35,7 @@ if (!isset($_SESSION['user_id'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/main-styles.css" />
     <link rel="stylesheet" href="/assets/form-styles.css" />
-    <link rel="stylesheet" href="/src/userPage/styles.css" />
+    <link rel="stylesheet" href="/src/user-page/styles.css" />
     <title>My Pets - User Page</title>
 </head>
 
@@ -52,24 +49,33 @@ if (!isset($_SESSION['user_id'])) {
     <section class="user-page-container">
         <?php if (empty($pets)) : ?>
             <p>You have not added any pets.</p>
-            <p><a href="./addAPet/addAPet.php">Click here</a> to add a new pet!</p>
-            
-            <?php else : ?>
-                
-                <h2 class="subtitle">Your pets</h2>
-                
-                <?php foreach ($pets as $pet): ?>
-                    
-                <div class="pet-container">
+
+        <?php else : ?>
+
+            <h2 class="subtitle">Your pets</h2>
+
+            <?php foreach ($pets as $pet) : ?>
+
+                <div class="pet-container" data-pet-id="<?php echo $pet->pet_id ?>">
                     <h3 class="pet-name"><?php echo $pet->name ?></h3>
                     <img class="pet-image" src="<?php echo $pet->photo_url; ?>" alt="<?php echo "a photo of your pet $pet->name" ?>" />
                 </div>
 
-                <?php endforeach; ?>
+                <script>
+                    document.querySelectorAll('.pet-container').forEach(petDiv => {
+                        petDiv.addEventListener('click', event => {
+                            const petId = event.currentTarget.getAttribute('data-pet-id');
 
-            <?php endif; ?>
+                            window.location.href = `./pet-page/pet-page.php?id=${petId}`;
+                        })
+                    })
+                </script>
 
+            <?php endforeach; ?>
 
+        <?php endif; ?>
+
+        <p><a href="./add-a-pet/add-a-pet.php" class="link link-accent">Click here</a> to add a new pet!</p>
 
     </section>
 </body>
