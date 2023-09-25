@@ -35,7 +35,7 @@ if (isset($_POST['submit'])) {
 
         if($user && password_verify($password, $user['password'])) {
             $_SESSION['user_id'] = $user['user_id'];
-            header('Location: /src/userPage/userPage.php');
+            header('Location: /src/user-page/user-page.php');
             exit();
         } else {
             echo "Invalid username or password";

@@ -1,32 +1,60 @@
 .form-container {
-    margin: 20px auto;
-  }
-  
-  .input-feild {
-    font-size: 1.5rem;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    text-transform: capitalize;
-  }
-  
-  .input {
-    font-size: 1.5rem;
-    width: 250px;
-    height: 40px;
-    color: #002233;
-  }
-  
-  .input::placeholder {
-    color: #d99a3a;
-    text-transform: capitalize;
-  }
-  
-  .input-sumbit{
-      background-color: #d99a3a;
-      color: #1f3c0b;
-      border-radius: 12px;
-      border: none;
-  }
-  
+  margin: 20px auto;
+}
+
+.input-feild {
+  font-size: 1.5rem;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-transform: capitalize;
+}
+
+.input {
+  font-size: 1.5rem;
+  width: 250px;
+  height: 40px;
+  color: #002233;
+}
+
+.input::placeholder {
+  color: #d99a3a;
+  text-transform: capitalize;
+}
+
+.input-sumbit {
+  background-color: #d99a3a;
+  color: #1f3c0b;
+  border-radius: 12px;
+  border: none;
+}
+
+.file-label {
+  display: inline-block;
+  background-color: #d99a3a;
+  color: white;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.file-label:hover {
+  background-color: #1f3c0b;
+}
+
+.radios {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  gap: 30px;
+}
+
+.radio-input{
+  display: flex;
+  gap: 5px;
+}

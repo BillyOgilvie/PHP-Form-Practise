@@ -35,19 +35,37 @@ body {
   padding: 20px;
   background-color: #0066ff;
   border-bottom: solid 8px #d99a3a;
+
+  display: flex;
+  justify-content: center;
 }
 
 /* NAV BAR */
 .nav-bar-list {
   display: flex;
-  gap: 5px;
+  gap: 10px;
   list-style-type: none;
+  position: absolute;
+  left: 30px;
+  top: 30px;
 }
 
-.nav-bar-list a, .nav-bar-list a:visited{
+.link, .link:visited{
   color: #d4e2f7;
+  text-decoration: none;
 }
 
-.nav-bar-list a:hover {
+.link:hover {
   color: #d99a3a;
+  text-decoration: underline;
+}
+
+.link-accent, .link-accent:visited{
+  color: #d99a3a;
+  text-decoration: underline;
+}
+
+.link-accent:hover {
+  color: #1f3c0b;
+  text-decoration: underline;
 }
