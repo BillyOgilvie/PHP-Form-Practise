@@ -47,17 +47,27 @@ $user_id = requireLogin();
                 </label>
                 <input class="input" type="number" name="age" placeholder="age">
             </div>
+
             <div class="input-feild">
-                <label class="label" for="sex">
-                    sex
-                </label>
-                <input class="input" type="text" name="sex" placeholder="sex...">
+                <label for="radios">Sex</label>
+                <div class="radios">
+                    <div class="radio-input">
+                        <input class="input-radio" type="radio" name="radios" value="m" id="radio1" checked>
+                        <label for="radio1">Male</label>
+                    </div>
+                    <div class="radio-input">
+                        <input class="input-radio" type="radio" name="radios" value="f" id="radio2">
+                        <label for="radio2">Female</label>
+                    </div>
+                </div>
+            </div>
+
             </div>
             <div class="input-feild">
-    <label for="photo" class="label" name="photo">Upload Image</label>
-    <label for="fileInput" class="file-label" id="fileName" name="photo">Choose File</label>
-    <input id="fileInput" class="input input-browse" type="file" name="image" style="display: none;">
-</div>
+                <label for="photo" class="label" name="photo">Upload Image</label>
+                <label for="fileInput" class="file-label" id="fileName" name="photo">Choose File</label>
+                <input id="fileInput" class="input input-browse" type="file" name="image" style="display: none;">
+            </div>
 
             <div class="input-feild">
                 <input class="input input-sumbit" type="submit" name="submit" value="Add Pet">
@@ -66,11 +76,11 @@ $user_id = requireLogin();
     </section>
 
     <script>
-  document.getElementById('fileInput').addEventListener('change', function() {
-    var fileName = document.getElementById('fileInput').files[0].name;
-    document.getElementById('fileName').textContent = fileName;
-  });
-</script>
+        document.getElementById('fileInput').addEventListener('change', function() {
+            var fileName = document.getElementById('fileInput').files[0].name;
+            document.getElementById('fileName').textContent = fileName;
+        });
+    </script>
 
 </body>
 
